@@ -4,7 +4,7 @@
 
 A text-to-SQL agent built around the parts that decide whether you can trust it: a **read-only sandbox enforced by the database itself**, **invariant checks** (including control totals) that catch wrong answers the database never complains about, and a **repair loop** that feeds failures back and knows when to stop.
 
-> **What is verified, and what is not.** 71 tests pass locally on Python 3.13 (stdlib only; SQLite). Deleting the authorizer makes 21 of them fail, and disabling the control-total check makes 5 fail. **There is no live model.** The SQL generator is a rule-based stand-in that injects realistic bugs and repairs some of them, so the repair rates below describe the loop's machinery, not how well a real model fixes SQL. The Claude generator (`sqlloop/llm.py`) is tested only with a fake transport, never against the live API.
+> **What is verified, and what is not.** 71 tests pass locally on Python 3.13, and in GitHub Actions on Linux with Python 3.11 and 3.13 (stdlib only; SQLite). Deleting the authorizer makes 21 of them fail, and disabling the control-total check makes 5 fail. **There is no live model.** The SQL generator is a rule-based stand-in that injects realistic bugs and repairs some of them, so the repair rates below describe the loop's machinery, not how well a real model fixes SQL. The Claude generator (`sqlloop/llm.py`) is tested only with a fake transport, never against the live API.
 
 ## The sandbox (`sqlloop/sandbox.py`)
 
