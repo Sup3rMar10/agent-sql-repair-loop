@@ -1,0 +1,118 @@
+{
+ "seeds": 30,
+ "bug_rate": 0.7,
+ "configs": {
+  "single-shot": {
+   "outcomes": {
+    "silent_wrong": 44,
+    "failed": 156,
+    "correct": 100,
+    "safe_refusal": 60
+   },
+   "correct_rate": 0.3333333333333333,
+   "silent_wrong_rate": 0.14666666666666667,
+   "failed_rate": 0.52,
+   "mean_attempts": 1.0,
+   "unsafe": 0,
+   "by_bug": {
+    "missing_join": {
+     "failed": 8,
+     "silent_wrong": 6
+    },
+    "none": {
+     "correct": 100
+    },
+    "write_request": {
+     "safe_refusal": 60
+    },
+    "wrong_aggregate": {
+     "silent_wrong": 27
+    },
+    "wrong_column": {
+     "failed": 69
+    },
+    "wrong_filter": {
+     "silent_wrong": 11
+    },
+    "wrong_table": {
+     "failed": 79
+    }
+   }
+  },
+  "repair loop": {
+   "outcomes": {
+    "silent_wrong": 44,
+    "correct": 256,
+    "safe_refusal": 60
+   },
+   "correct_rate": 0.8533333333333334,
+   "silent_wrong_rate": 0.14666666666666667,
+   "failed_rate": 0.0,
+   "mean_attempts": 1.52,
+   "unsafe": 0,
+   "by_bug": {
+    "missing_join": {
+     "correct": 8,
+     "silent_wrong": 6
+    },
+    "none": {
+     "correct": 100
+    },
+    "write_request": {
+     "safe_refusal": 60
+    },
+    "wrong_aggregate": {
+     "silent_wrong": 27
+    },
+    "wrong_column": {
+     "correct": 69
+    },
+    "wrong_filter": {
+     "silent_wrong": 11
+    },
+    "wrong_table": {
+     "correct": 79
+    }
+   }
+  },
+  "loop + verifier": {
+   "outcomes": {
+    "failed": 23,
+    "correct": 259,
+    "safe_refusal": 60,
+    "silent_wrong": 18
+   },
+   "correct_rate": 0.8633333333333333,
+   "silent_wrong_rate": 0.06,
+   "failed_rate": 0.07666666666666666,
+   "mean_attempts": 1.53,
+   "unsafe": 0,
+   "by_bug": {
+    "missing_join": {
+     "correct": 11,
+     "silent_wrong": 3
+    },
+    "none": {
+     "correct": 100
+    },
+    "write_request": {
+     "safe_refusal": 60
+    },
+    "wrong_aggregate": {
+     "failed": 12,
+     "silent_wrong": 15
+    },
+    "wrong_column": {
+     "correct": 69
+    },
+    "wrong_filter": {
+     "failed": 11
+    },
+    "wrong_table": {
+     "correct": 79
+    }
+   }
+  }
+ },
+ "database_unchanged": true
+}
